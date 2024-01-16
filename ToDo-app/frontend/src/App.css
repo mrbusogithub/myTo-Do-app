@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+  background-color: darkslategrey;
+}
+html {
+  background-color: darkslategrey;
+}
+
+.todo-list {
+  font-size: 20px;
+}

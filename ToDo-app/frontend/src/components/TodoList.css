@@ -1,0 +1,43 @@
+/* Style for the list of todos */
+.todo-list {
+    list-style: none; /* Removes default list bullet points */
+    margin-right: 60px;
+}
+
+/* Style for individual todo items */
+.todo-list li {
+    margin: 5px;
+    background-color: #1c1c1c;
+    color: blanchedalmond;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+/* Style for the container of each todo item */
+.todo-item {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+}
+
+/* Style for the content of each todo item */
+.todo-content {
+  flex-grow: 1; 
+  padding-left: 60px;
+  text-align: start;
+} 
+
+/* Style for the buttons (Edit, Delete, Checkbox) of each todo item */
+.todo-buttons {
+  display: flex;
+  gap: 10px;
+  padding-right: 60px;
+}
+
+/* Style for completed todo items */
+.completed {
+  opacity: 0.5; /* Reduces opacity for completed to-dos */
+  text-decoration: line-through; /* Adds a line-through effect for completed to-dos */
+}
