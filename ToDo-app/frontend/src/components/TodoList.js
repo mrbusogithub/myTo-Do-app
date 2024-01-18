@@ -54,7 +54,7 @@ const TodoList = ({ newTodo, setNewTodo }) => {
     try {
       // HTTP request to add a new todo
       const response = await axios.post(
-        "http://localhost:8080/login/data/add-task",
+        "https://todolist-app-backend-mz4r.onrender.com/login/data/add-task",
         { content: newTodo },
         {
           headers: {

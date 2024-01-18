@@ -40,7 +40,7 @@ const App = () => {
 
       // Send a login request to the server
       const response = await axios.post(
-        "http://localhost:8080/login",
+        "https://todolist-app-backend-mz4r.onrender.com/login",
         loginData
       );
 
@@ -60,7 +60,9 @@ const App = () => {
   const handleLogout = async () => {
     try {
       // Send a logout request to the server
-      const response = await axios.post("http://localhost:8080/logout");
+      const response = await axios.post(
+        "https://todolist-app-backend-mz4r.onrender.com/logout"
+      );
       console.log(response.data.message);
 
       // Dispatch logout action, remove token from local storage, and update UI
@@ -110,10 +112,13 @@ const App = () => {
       }
 
       // Send a registration request to the server
-      const response = await axios.post("http://localhost:8080/register", {
-        username: registerData.username,
-        password: registerData.password,
-      });
+      const response = await axios.post(
+        "https://todolist-app-backend-mz4r.onrender.com/register",
+        {
+          username: registerData.username,
+          password: registerData.password,
+        }
+      );
 
       // Extract user data from the response and dispatch registration action
       const userData = response?.data?.user;
@@ -135,7 +140,7 @@ const App = () => {
     try {
       // Send a request to the server to add a new todo
       const response = await axios.post(
-        "http://localhost:8080/login/data/add-task",
+        "https://todolist-app-backend-mz4r.onrender.com/login/data/add-task",
         { content: newTodo },
         {
           headers: {
